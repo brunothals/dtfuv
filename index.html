@@ -9,6 +9,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <script src="image-slot.js"></script>
+
+<!-- ============ META PIXEL ============ -->
+<!-- TROCAR "SEU_PIXEL_ID_AQUI" pelo ID do seu pixel (15 a 16 dígitos) -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'SEU_PIXEL_ID_AQUI');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+<!-- ============ FIM META PIXEL ============ -->
 <style>
   :root{
     --ink: #0a0908;
@@ -490,6 +508,7 @@
     border-radius:50%;
   }
   .sku-img svg{width:55%;height:55%;color:var(--champagne)}
+  .sku-img.product-photo img{width:100%;height:100%;object-fit:cover;display:block}
   .sku-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
   .sku-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px}
   .sku-body h3{font-size:22px;margin-bottom:6px;color:var(--paper)}
@@ -581,7 +600,7 @@
       <div class="badge"><i></i>Dourado Glitter Premium</div>
       <image-slot id="hero-product"
                   shape="rounded" radius="14"
-                  src="assets/dtf-hero-showcase.png"
+                  src="assets/proposta-hero-catalogo.png"
                   placeholder="Solte aqui sua foto real: taça com adesivo dourado aplicado"></image-slot>
     </div>
   </div>
@@ -600,13 +619,8 @@
     <div class="skus">
       <!-- SKU 1 -->
       <div class="sku reveal">
-        <div class="sku-img">
-          <div class="ico-wrap">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6">
-              <rect x="10" y="14" width="44" height="36" rx="3"/>
-              <path d="M18 26 L46 26 M18 34 L40 34 M18 42 L34 42"/>
-            </svg>
-          </div>
+        <div class="sku-img product-photo">
+          <img src="assets/proposta-sku-mini.png" alt="Cartela Mini Nome com adesivos DTF UV dourado glitter">
         </div>
         <div class="sku-body">
           <span class="sku-tag">Entrada</span>
@@ -1147,6 +1161,23 @@
   document.querySelectorAll('[data-sku]').forEach(a=>{
     const sku = a.getAttribute('data-sku');
     a.setAttribute('href', buildWaUrl(MSG_POR_SKU[sku] || MSG_DEFAULT));
+  });
+
+  /* ============ TRACKING DE CONVERSAO ============ */
+  // Dispara evento Meta Pixel + Google a cada clique em WhatsApp
+  document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+    a.addEventListener('click', () => {
+      const sku = a.getAttribute('data-sku') || 'geral';
+      // Meta Pixel — evento custom + Contact padrao
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', { content_name: sku });
+        fbq('trackCustom', 'ClickWhatsApp', { sku });
+      }
+      // Google Analytics (gtag) — se configurado
+      if (typeof gtag === 'function') {
+        gtag('event', 'click_whatsapp', { sku });
+      }
+    });
   });
 
   /* ============ Reveal on scroll ============ */
