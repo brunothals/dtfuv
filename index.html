@@ -439,6 +439,92 @@
 
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* ============ CATALOGO SKUs ============ */
+  .catalog{
+    padding:90px 0 70px;
+    background:linear-gradient(180deg,#0a0908 0%,#100d09 50%,#0a0908 100%);
+    border-top:1px solid rgba(217,200,168,.08);
+    border-bottom:1px solid rgba(217,200,168,.08);
+  }
+  .catalog-head{text-align:center;max-width:680px;margin:0 auto 48px}
+  .catalog-head h2{margin-top:16px}
+  .catalog-head p{color:#bdb3a3;margin-top:14px;font-size:16px}
+  .urgency{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:8px 16px;border-radius:999px;margin-bottom:24px;
+    background:rgba(233,196,106,.08);border:1px solid rgba(233,196,106,.25);
+    font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne);
+  }
+  .urgency i{width:6px;height:6px;border-radius:50%;background:#25D366;box-shadow:0 0 10px #25D366;animation:pulse2 1.8s ease-in-out infinite}
+  @keyframes pulse2{0%,100%{opacity:.6}50%{opacity:1}}
+
+  .skus{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:680px){.skus{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1040px){.skus{grid-template-columns:repeat(4,1fr)}}
+  .sku{
+    display:flex;flex-direction:column;
+    border:1px solid rgba(217,200,168,.16);border-radius:var(--r);
+    background:linear-gradient(180deg,#100e0b,#0c0a08);
+    overflow:hidden;position:relative;
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .sku:hover{transform:translateY(-4px);border-color:rgba(217,200,168,.35);box-shadow:0 22px 50px -22px rgba(233,196,106,.25)}
+  .sku.featured{border-color:rgba(233,196,106,.45)}
+  .sku.featured::before{
+    content:"MAIS PEDIDO";
+    position:absolute;top:14px;right:14px;z-index:3;
+    padding:5px 11px;border-radius:999px;
+    background:var(--gold-grad);color:#2a1d05;
+    font-size:9.5px;font-weight:700;letter-spacing:.18em;
+    box-shadow:0 6px 18px -4px rgba(233,196,106,.6);
+  }
+  .sku-img{
+    aspect-ratio:1;background:#15110d;position:relative;
+    border-bottom:1px solid rgba(217,200,168,.08);
+    display:grid;place-items:center;overflow:hidden;
+  }
+  .sku-img .ico-wrap{
+    width:64%;height:64%;display:grid;place-items:center;
+    background:radial-gradient(circle at 30% 30%, rgba(233,196,106,.18), rgba(233,196,106,.02) 70%);
+    border-radius:50%;
+  }
+  .sku-img svg{width:55%;height:55%;color:var(--champagne)}
+  .sku-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .sku-tag{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);margin-bottom:8px}
+  .sku-body h3{font-size:22px;margin-bottom:6px;color:var(--paper)}
+  .sku-body .desc{color:#9c9385;font-size:13.5px;line-height:1.55;margin-bottom:18px;min-height:42px}
+  .sku-price{display:flex;align-items:baseline;gap:6px;margin-bottom:18px}
+  .sku-price .from{font-size:11px;color:#8a8074;letter-spacing:.1em;text-transform:uppercase}
+  .sku-price .val{
+    font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1;
+    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  }
+  .sku .btn-pick{
+    margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 18px;border-radius:999px;
+    background:rgba(255,255,255,.04);border:1px solid rgba(217,200,168,.28);
+    color:var(--paper);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  .sku .btn-pick:hover{background:rgba(217,200,168,.1);border-color:var(--champagne)}
+  .sku.featured .btn-pick{background:var(--gold-grad);color:#2a1d05;border-color:transparent;font-weight:600}
+  .sku .btn-pick .wa-ico{width:14px;height:14px}
+  .sku-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .sku-meta span{font-size:11px;color:#bdb3a3;padding:4px 9px;border:1px solid rgba(217,200,168,.16);border-radius:999px;background:rgba(255,255,255,.015)}
+
+  .perso-cta{
+    margin-top:36px;padding:22px 26px;border-radius:var(--r);
+    border:1px dashed rgba(217,200,168,.28);
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
+    background:rgba(217,200,168,.03);
+  }
+  .perso-cta p{color:#cfc6b8;font-size:14.5px;max-width:48ch}
+  .perso-cta a{
+    padding:13px 22px;border-radius:999px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--paper);border:1px solid rgba(217,200,168,.32);
+  }
+  .perso-cta a:hover{border-color:var(--champagne);background:rgba(217,200,168,.08)}
 </style>
 </head>
 <body>
@@ -451,10 +537,10 @@
       <span>Adesivos DTF&nbsp;UV</span>
     </div>
     <div class="nav-links">
+      <a href="#catalogo">Catálogo</a>
       <a href="#dourado">Dourado</a>
       <a href="#aplicacao">Aplicação</a>
       <a href="#vantagens">Vantagens</a>
-      <a href="#vitrine">Vitrine</a>
       <a href="#faq">FAQ</a>
     </div>
     <a class="btn btn-ghost" id="wa-nav" href="#">Falar agora</a>
@@ -471,14 +557,16 @@
         <span class="line">produto parecer</span>
         <span class="line gold-text serif" style="font-style:italic">três vezes mais caro</span>
       </h1>
-      <p class="sub">Adesivos DTF UV com dourado glitter premium, alto relevo e verniz. A gente cria a arte para você e entrega o tipo de acabamento que o cliente fotografa antes mesmo de usar.</p>
+      <p class="sub">Adesivos DTF UV com dourado glitter premium, alto relevo e verniz. Cartelas prontas <strong style="color:var(--champagne)">a partir de R$ 24,90</strong> ou arte sob medida — o tipo de acabamento que o cliente fotografa antes mesmo de usar.</p>
 
       <div class="hero-ctas">
-        <a class="btn btn-gold btn-lg" id="wa-hero1" href="#">
-          <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1zm5.2-6.8c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-1 1.3c-.2.2-.4.3-.7.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.1.9 2.9.9 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
-          Quero meu adesivo personalizado
+        <a class="btn btn-gold btn-lg" href="#catalogo">
+          Ver cartelas a partir de R$ 24,90
         </a>
-        <a class="btn btn-ghost" id="wa-hero2" href="#">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" id="wa-hero2" href="#">
+          <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1zm5.2-6.8c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-1 1.3c-.2.2-.4.3-.7.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.1.9 2.9.9 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+          Pedir sob medida
+        </a>
       </div>
 
       <div class="hero-tags">
@@ -498,6 +586,140 @@
     </div>
   </div>
 </header>
+
+<!-- ==================== CATALOGO — COMECE POR AQUI ==================== -->
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="catalog-head reveal">
+      <span class="urgency"><i></i>Dia dos Namorados · pedidos até 05/jun garantem entrega</span>
+      <span class="eyebrow">Comece por aqui</span>
+      <h2 style="margin-top:14px">Adesivos prontos a partir de <em class="serif gold-text" style="font-style:italic">R$ 24,90</em></h2>
+      <p>Escolha sua cartela, manda o nome no WhatsApp e em poucos minutos a gente devolve a prévia. Sem briefing, sem complicação.</p>
+    </div>
+
+    <div class="skus">
+      <!-- SKU 1 -->
+      <div class="sku reveal">
+        <div class="sku-img">
+          <div class="ico-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="10" y="14" width="44" height="36" rx="3"/>
+              <path d="M18 26 L46 26 M18 34 L40 34 M18 42 L34 42"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sku-body">
+          <span class="sku-tag">Entrada</span>
+          <h3 class="serif">Cartela Mini Nome</h3>
+          <p class="desc">10 adesivos do mesmo nome em tamanhos pequenos. Ideal para taça e copo.</p>
+          <div class="sku-meta">
+            <span>10 adesivos</span><span>até 3cm</span><span>1 nome</span>
+          </div>
+          <div class="sku-price">
+            <span class="from">por apenas</span>
+            <span class="val">R$ 24,90</span>
+          </div>
+          <a class="btn-pick" data-sku="sku-mini" href="#">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1z"/></svg>
+            Pedir no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- SKU 2 - DESTAQUE -->
+      <div class="sku featured reveal">
+        <div class="sku-img">
+          <div class="ico-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M32 8 L36 22 L50 22 L40 30 L44 44 L32 36 L20 44 L24 30 L14 22 L28 22 Z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sku-body">
+          <span class="sku-tag">Mais vendido</span>
+          <h3 class="serif">Cartela Festa</h3>
+          <p class="desc">30 adesivos personalizados com nome + tema. Perfeita para lembrancinha de evento.</p>
+          <div class="sku-meta">
+            <span>30 adesivos</span><span>nome + tema</span><span>4 tamanhos</span>
+          </div>
+          <div class="sku-price">
+            <span class="from">por apenas</span>
+            <span class="val">R$ 49,90</span>
+          </div>
+          <a class="btn-pick" data-sku="sku-festa" href="#">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1z"/></svg>
+            Pedir agora
+          </a>
+        </div>
+      </div>
+
+      <!-- SKU 3 -->
+      <div class="sku reveal">
+        <div class="sku-img">
+          <div class="ico-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M18 14 L46 14 L50 26 L14 26 Z"/>
+              <path d="M14 26 L14 52 L50 52 L50 26"/>
+              <path d="M28 14 L28 26 M36 14 L36 26"/>
+              <path d="M24 36 L40 36 M24 42 L40 42"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sku-body">
+          <span class="sku-tag">Decoração</span>
+          <h3 class="serif">Kit Decoração</h3>
+          <p class="desc">60 adesivos sortidos para decorar embalagens, caixas e lembranças do seu evento.</p>
+          <div class="sku-meta">
+            <span>60 adesivos</span><span>5 estilos</span><span>variedade</span>
+          </div>
+          <div class="sku-price">
+            <span class="from">por apenas</span>
+            <span class="val">R$ 89,90</span>
+          </div>
+          <a class="btn-pick" data-sku="sku-deco" href="#">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1z"/></svg>
+            Pedir no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- SKU 4 -->
+      <div class="sku reveal">
+        <div class="sku-img">
+          <div class="ico-wrap">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="10" y="22" width="44" height="32" rx="2"/>
+              <path d="M10 30 L54 30"/>
+              <path d="M22 22 L22 14 L42 14 L42 22"/>
+              <circle cx="32" cy="42" r="4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="sku-body">
+          <span class="sku-tag">Atacado</span>
+          <h3 class="serif">Kit Revendedora</h3>
+          <p class="desc">300 adesivos para você revender no seu Instagram. Margem alta, giro rápido.</p>
+          <div class="sku-meta">
+            <span>300 adesivos</span><span>variedade</span><span>margem 3x</span>
+          </div>
+          <div class="sku-price">
+            <span class="from">por apenas</span>
+            <span class="val">R$ 499,90</span>
+          </div>
+          <a class="btn-pick" data-sku="sku-revenda" href="#">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1z"/></svg>
+            Quero revender
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="perso-cta reveal">
+      <p><strong style="color:var(--paper)">Não achou o que precisa?</strong> A gente faz <em class="serif" style="font-style:italic;color:var(--champagne)">sob medida</em> — arte exclusiva, tamanho e quantidade do jeito que você quiser.</p>
+      <a data-sku="sku-perso" href="#">Pedir sob medida</a>
+    </div>
+  </div>
+</section>
 
 <!-- ==================== S1 — POR QUE VENDE MAIS ==================== -->
 <section class="section" id="dourado">
@@ -908,11 +1130,24 @@
 
 <script>
   /* ============ EDITÁVEL: seu WhatsApp ============ */
-  const WHATSAPP_NUMBER = "5500000000000";          // apenas dígitos com DDI
-  const WHATSAPP_MSG    = "Olá! Quero um adesivo DTF UV com dourado glitter premium.";
+  const WHATSAPP_NUMBER = "5519997439291";
+  const MSG_DEFAULT     = "Olá! Vim pelo site dos Adesivos DTF UV. Quero saber mais.";
+  const MSG_POR_SKU = {
+    "sku-mini":     "Oi! Quero a CARTELA MINI NOME (R$ 24,90). Vou te mandar o nome e o tema.",
+    "sku-festa":    "Oi! Quero a CARTELA FESTA (R$ 49,90). Já te conto o nome e o tema da festa.",
+    "sku-deco":     "Oi! Quero o KIT DECORAÇÃO (R$ 89,90). Pode me passar mais detalhes?",
+    "sku-revenda":  "Oi! Tenho interesse no KIT REVENDEDORA (R$ 499,90). Quero entender o que vem.",
+    "sku-perso":    "Oi! Quero algo SOB MEDIDA. Vou te mandar minha ideia / referência."
+  };
 
-  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
-  document.querySelectorAll('#wa-nav,#wa-hero1,#wa-hero2,#wa-final,#wa-float,#wa-foot').forEach(a=>a.setAttribute('href',waUrl));
+  const buildWaUrl = (msg) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+  const waDefault = buildWaUrl(MSG_DEFAULT);
+  document.querySelectorAll('#wa-nav,#wa-hero1,#wa-hero2,#wa-final,#wa-float,#wa-foot').forEach(a=>a.setAttribute('href',waDefault));
+  document.querySelectorAll('[data-sku]').forEach(a=>{
+    const sku = a.getAttribute('data-sku');
+    a.setAttribute('href', buildWaUrl(MSG_POR_SKU[sku] || MSG_DEFAULT));
+  });
 
   /* ============ Reveal on scroll ============ */
   const io = new IntersectionObserver((entries)=>{
