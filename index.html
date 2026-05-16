@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Adesivos DTF UV — Dourado Glitter Premium</title>
+<meta name="description" content="Adesivos DTF UV com efeito dourado glitter premium, alto relevo e verniz. O acabamento que faz o cliente pagar mais sem perguntar o preço." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+  :root{
+    --ink: #0a0908;
+    --ink-2: #141210;
+    --paper: #f4ede4;
+    --paper-2: #ebe1d2;
+    --champagne: #d9c8a8;
+    --muted: #8a8074;
+    --line-soft: rgba(217,200,168,.14);
+
+    --gold-1: #f9e7b0;
+    --gold-2: #e9c46a;
+    --gold-3: #c8932a;
+    --gold-4: #8a5a16;
+    --gold-grad: linear-gradient(135deg,
+      #f9e7b0 0%, #f0cf76 18%, #d9a93a 38%, #b8821e 55%,
+      #e6c365 72%, #f7e2a4 86%, #c8932a 100%);
+
+    --r: 14px;
+    --max: 1240px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--ink);
+    color:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:0}
+
+  .serif{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:-.01em}
+  .eyebrow{
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--champagne);font-weight:500;
+  }
+  h1,h2,h3{margin:0;font-weight:400}
+  h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6.8vw,92px);line-height:1.03;letter-spacing:-.02em}
+  h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.4vw,58px);line-height:1.08;letter-spacing:-.015em}
+  h3{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.15}
+  p{margin:0}
+
+  /* DOURADO TEXTO */
+  .gold-text{
+    background:var(--gold-grad);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+    background-size:200% 200%;
+    animation:goldShimmer 6s ease-in-out infinite;
+    filter:drop-shadow(0 1px 0 rgba(0,0,0,.4)) drop-shadow(0 0 18px rgba(233,196,106,.22));
+  }
+  @keyframes goldShimmer{
+    0%,100%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+  }
+
+  .hairline{height:1px;background:linear-gradient(90deg,transparent,var(--champagne),transparent);opacity:.45}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{position:relative}
+
+  /* NAV */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    background:rgba(10,9,8,.6);
+    border-bottom:1px solid rgba(217,200,168,.08);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto}
+  .mark{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px}
+  .mark .dot{width:10px;height:10px;border-radius:50%;background:var(--gold-grad);box-shadow:0 0 14px rgba(233,196,106,.6)}
+  .nav-links{display:none;gap:30px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#cfc6b8}
+  .nav-links a:hover{color:var(--paper)}
+  .nav .btn{padding:10px 18px;font-size:11.5px}
+  @media(min-width:980px){.nav-links{display:flex}}
+
+  /* BOTÕES */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 26px;border-radius:999px;
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+    transition:transform .25s ease, box-shadow .25s ease;white-space:nowrap;
+  }
+  .btn-gold{
+    color:#2a1d05;background:var(--gold-grad);background-size:200% 200%;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.6),
+      inset 0 -1px 0 rgba(0,0,0,.25),
+      0 10px 30px -8px rgba(233,196,106,.5),
+      0 0 0 1px rgba(255,255,255,.06);
+    animation:goldShimmer 6s ease-in-out infinite;
+  }
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -1px 0 rgba(0,0,0,.25),0 18px 40px -8px rgba(233,196,106,.6)}
+  .btn-ghost{color:var(--paper);border:1px solid rgba(217,200,168,.35);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--champagne);background:rgba(217,200,168,.06)}
+  .btn .wa-ico{width:16px;height:16px;flex:none}
+  .btn-lg{padding:20px 32px;font-size:13.5px}
+
+  /* IMAGE SLOT styling override */
+  image-slot{
+    --slot-bg: #15110d;
+    --slot-border: rgba(217,200,168,.18);
+    --slot-text: #8a8074;
+    background:var(--slot-bg);
+    border:1px solid var(--slot-border);
+    color:var(--slot-text);
+    position:relative;
+  }
+  /* glow ao redor de slots em fundo escuro */
+  .slot-frame{position:relative}
+  .slot-frame::before{
+    content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(135deg,rgba(233,196,106,.18),transparent 40%,transparent 60%,rgba(233,196,106,.18));
+    -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+    -webkit-mask-composite:xor;mask-composite:exclude;padding:1px;opacity:.5;
+  }
+
+  /* HERO */
+  .hero{
+    padding:140px 0 80px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 500px at 80% 10%, rgba(201,147,42,.18), transparent 60%),
+      radial-gradient(700px 500px at 10% 90%, rgba(233,196,106,.10), transparent 60%),
+      var(--ink);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(1px 1px at 20% 30%, rgba(233,196,106,.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 70% 60%, rgba(255,240,200,.35) 50%, transparent 51%),
+      radial-gradient(1px 1px at 40% 80%, rgba(233,196,106,.3) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 85% 25%, rgba(255,240,200,.45) 50%, transparent 51%),
+      radial-gradient(1px 1px at 15% 70%, rgba(233,196,106,.35) 50%, transparent 51%);
+    background-size:400px 400px,300px 300px,500px 500px,350px 350px,450px 450px;
+    opacity:.5;
+  }
+  .hero-grid{display:grid;gap:48px;align-items:center;grid-template-columns:1fr}
+  @media(min-width:980px){
+    .hero-grid{grid-template-columns:1.05fr 1fr;gap:64px}
+    .hero{padding:160px 0 110px}
+  }
+  .hero h1 .line{display:block}
+  .hero .sub{color:#cfc6b8;font-size:clamp(15.5px,1.4vw,17.5px);line-height:1.65;max-width:54ch;margin-top:28px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:38px;font-size:12px;color:#bdb3a3}
+  .hero-tags span{border:1px solid rgba(217,200,168,.22);padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.015);letter-spacing:.04em}
+  .hero-tags .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold-grad);margin-right:8px;vertical-align:middle}
+
+  .hero-slot{
+    position:relative;width:100%;max-width:520px;margin-inline:auto;
+    aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
+  }
+  .hero-slot image-slot{width:100%;height:100%;display:block;border-radius:var(--r)}
+  .hero-slot .badge{
+    position:absolute;top:18px;left:18px;z-index:3;
+    display:flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+    background:rgba(10,9,8,.7);backdrop-filter:blur(8px);
+    border:1px solid rgba(217,200,168,.25);
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--champagne);
+    pointer-events:none;
+  }
+  .hero-slot .badge i{width:8px;height:8px;border-radius:50%;background:var(--gold-grad);box-shadow:0 0 10px rgba(233,196,106,.7)}
+
+  /* SEÇÕES */
+  .section{padding:100px 0}
+  .section-head{max-width:760px;margin-bottom:56px}
+  .section-head .eyebrow{margin-bottom:18px;display:block}
+  .section-head p{color:#bdb3a3;margin-top:18px;font-size:16px;max-width:60ch}
+  .center.section-head{margin-inline:auto;text-align:center}
+  .center.section-head p{margin-inline:auto}
+  .alt{background:linear-gradient(180deg, #0a0908, #0e0c0a 30%, #0a0908)}
+  .paper{background:var(--paper);color:var(--ink)}
+  .paper .section-head p, .paper .muted{color:#5e564b}
+  .paper .eyebrow{color:#8a5a16}
+
+  /* S1 — POR QUE VENDE MAIS */
+  .why-grid{
+    display:grid;gap:24px;
+    grid-template-columns:1fr;align-items:start;
+  }
+  @media(min-width:900px){.why-grid{grid-template-columns:1.05fr 1fr;gap:64px}}
+  .why-points{display:grid;gap:6px;margin-top:36px}
+  .why-point{
+    display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start;
+    padding:24px 0;border-bottom:1px solid rgba(217,200,168,.1);
+  }
+  .why-point .n{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:34px;
+    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;line-height:1;
+  }
+  .why-point h3{font-size:21px;margin-bottom:6px}
+  .why-point p{color:#9c9385;font-size:14.5px;line-height:1.6;max-width:48ch}
+  .why-visual{
+    aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
+  }
+  .why-visual image-slot{width:100%;height:100%;display:block;border-radius:var(--r)}
+
+  /* S2 — DESTAQUE DOURADO */
+  .gold-feature{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+  @media(min-width:900px){.gold-feature{grid-template-columns:1fr 1fr;gap:72px}}
+  .gold-feature .copy p{color:#bdb3a3;margin-top:22px;font-size:16px;max-width:54ch}
+  .gold-feature .copy .quote{
+    margin-top:32px;padding:24px 26px;border-left:2px solid;
+    border-image:var(--gold-grad) 1;
+    background:rgba(217,200,168,.04);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;
+    line-height:1.5;color:#e8dec9;
+  }
+  .gold-tile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .gold-tile-grid image-slot{aspect-ratio:1;border-radius:12px;display:block}
+
+  /* S3 — APLICAÇÃO */
+  .steps{display:grid;gap:16px;grid-template-columns:repeat(1,1fr)}
+  @media(min-width:680px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1040px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{
+    border:1px solid rgba(217,200,168,.14);border-radius:var(--r);overflow:hidden;
+    background:#0e0c0a;display:flex;flex-direction:column;
+  }
+  .step .img{aspect-ratio:4/5;position:relative;background:#141210;overflow:hidden}
+  .step .img image-slot{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;background:#141210}
+  .step .img .num{
+    position:absolute;top:14px;left:14px;z-index:3;
+    width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    background:var(--gold-grad);color:#2a1d05;
+    font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;
+    box-shadow:0 4px 14px rgba(0,0,0,.5);pointer-events:none;
+  }
+  .step .body{padding:22px 22px 26px}
+  .step h3{font-size:22px;margin-bottom:6px}
+  .step p{color:#9c9385;font-size:14px;line-height:1.6}
+
+  .support-text{
+    margin-top:48px;padding:28px 32px;
+    border:1px solid rgba(217,200,168,.18);border-radius:var(--r);
+    background:linear-gradient(180deg, rgba(217,200,168,.04), transparent);
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(18px,1.8vw,22px);line-height:1.5;color:#e8dec9;max-width:780px;
+  }
+
+  /* S4 — VANTAGENS */
+  .advs{display:grid;gap:14px;grid-template-columns:repeat(1,1fr)}
+  @media(min-width:680px){.advs{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1040px){.advs{grid-template-columns:repeat(3,1fr)}}
+  .adv{
+    padding:32px 28px 30px;border-radius:var(--r);
+    border:1px solid rgba(217,200,168,.14);background:#0e0c0a;
+    transition:transform .35s ease, border-color .35s ease, background .35s ease;
+  }
+  .adv:hover{transform:translateY(-3px);border-color:rgba(217,200,168,.3);background:#100e0b}
+  .adv .ico{
+    width:48px;height:48px;border-radius:12px;
+    display:grid;place-items:center;margin-bottom:22px;
+    background:radial-gradient(circle at 30% 30%, rgba(233,196,106,.18), rgba(233,196,106,.04));
+    border:1px solid rgba(217,200,168,.22);color:var(--champagne);
+  }
+  .adv h3{font-size:23px;margin-bottom:10px}
+  .adv p{color:#9c9385;font-size:14.5px;line-height:1.6}
+
+  /* S5 — ARTE */
+  .art-section{display:grid;gap:48px;grid-template-columns:1fr;align-items:center}
+  @media(min-width:900px){.art-section{grid-template-columns:1fr 1.05fr;gap:72px}}
+  .art-list{margin-top:28px;display:grid;gap:10px;padding:0}
+  .art-list li{
+    list-style:none;padding:14px 0 14px 28px;position:relative;
+    border-bottom:1px solid rgba(217,200,168,.1);
+    font-size:15px;color:#cfc6b8;
+  }
+  .art-list li::before{
+    content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+    width:14px;height:1px;background:var(--gold-grad);
+  }
+  .art-visual{aspect-ratio:1/1;border-radius:var(--r);overflow:hidden}
+  .art-visual image-slot{width:100%;height:100%;display:block;border-radius:var(--r)}
+
+  /* S6 — ONDE APLICAR */
+  .places{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:680px){.places{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:1040px){.places{grid-template-columns:repeat(4,1fr)}}
+  .place{
+    aspect-ratio:1;border-radius:12px;border:1px solid rgba(217,200,168,.14);background:#0e0c0a;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+    padding:18px;position:relative;overflow:hidden;
+    transition:border-color .3s ease, transform .3s ease;
+  }
+  .place:hover{border-color:rgba(217,200,168,.32);transform:translateY(-2px)}
+  .place svg{flex:1;width:60%;height:auto;color:var(--champagne)}
+  .place .name{font-size:13px;color:#cfc6b8;letter-spacing:.04em;text-align:center;margin-top:8px}
+  .place::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(217,200,168,.3),transparent)}
+
+  /* S7 — VITRINE EMOCIONAL */
+  .vitrine{
+    display:grid;gap:14px;grid-template-columns:repeat(6,1fr);grid-auto-rows:160px;
+  }
+  @media(max-width:760px){.vitrine{grid-auto-rows:140px}}
+  .v-cell{border-radius:12px;overflow:hidden;position:relative}
+  .v-cell image-slot{position:absolute;inset:0;width:100%;height:100%;border-radius:12px}
+  .v-cell .tag{
+    position:absolute;bottom:10px;left:12px;z-index:2;pointer-events:none;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cfc6b8;
+    background:rgba(10,9,8,.55);backdrop-filter:blur(6px);
+    padding:4px 10px;border-radius:999px;border:1px solid rgba(217,200,168,.18);
+  }
+  .v1{grid-column:span 4;grid-row:span 2}
+  .v2{grid-column:span 2;grid-row:span 1}
+  .v3{grid-column:span 2;grid-row:span 1}
+  .v4{grid-column:span 3;grid-row:span 2}
+  .v5{grid-column:span 3;grid-row:span 2}
+  @media(max-width:760px){
+    .v1{grid-column:span 6;grid-row:span 2}
+    .v2,.v3{grid-column:span 3;grid-row:span 1}
+    .v4,.v5{grid-column:span 6;grid-row:span 2}
+  }
+  .vitrine-copy{max-width:680px;margin:0 auto 56px;text-align:center}
+  .vitrine-copy p{color:#bdb3a3;margin-top:18px;font-size:16.5px}
+
+  /* S8 — REAÇÕES (psicologia) */
+  .reactions{display:grid;gap:16px;grid-template-columns:1fr}
+  @media(min-width:760px){.reactions{grid-template-columns:repeat(3,1fr)}}
+  .reaction{
+    padding:36px 30px;border-radius:var(--r);
+    border:1px solid rgba(217,200,168,.14);background:#0e0c0a;
+    position:relative;
+  }
+  .reaction .qmark{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:80px;line-height:.6;
+    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    height:30px;margin-bottom:12px;
+  }
+  .reaction blockquote{
+    margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:21px;line-height:1.4;color:#e8dec9;
+  }
+  .reaction .who{
+    margin-top:22px;display:flex;align-items:center;gap:10px;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a8074;
+  }
+  .reaction .who i{width:5px;height:5px;border-radius:50%;background:var(--gold-grad)}
+
+  /* S9 — COMO FUNCIONA */
+  .how{display:grid;gap:0;grid-template-columns:1fr;margin-top:24px}
+  @media(min-width:900px){.how{grid-template-columns:repeat(4,1fr);gap:0}}
+  .how-step{padding:36px 28px;border-top:1px solid rgba(0,0,0,.08);position:relative}
+  @media(min-width:900px){
+    .how-step{border-top:0;border-left:1px solid rgba(0,0,0,.1)}
+    .how-step:first-child{border-left:0}
+  }
+  .paper .how-step .num{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:48px;
+    background:linear-gradient(135deg,#b8821e,#8a5a16);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    line-height:1;margin-bottom:16px;
+  }
+  .paper .how-step h3{color:var(--ink);margin-bottom:8px}
+  .paper .how-step p{color:#5e564b;font-size:14.5px;line-height:1.6}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{border-bottom:1px solid rgba(217,200,168,.14);padding:24px 0}
+  .faq summary{
+    list-style:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--paper);
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .plus{
+    width:28px;height:28px;border-radius:50%;border:1px solid rgba(217,200,168,.3);
+    display:grid;place-items:center;color:var(--champagne);
+    transition:transform .3s ease, background .3s ease;flex:none;font-size:16px;
+  }
+  .faq details[open] summary .plus{transform:rotate(45deg);background:rgba(217,200,168,.1)}
+  .faq .a{margin-top:14px;color:#9c9385;font-size:15px;line-height:1.7;max-width:62ch}
+
+  /* CTA FINAL */
+  .cta-final{
+    text-align:center;padding:130px 24px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(700px 400px at 50% 30%, rgba(201,147,42,.22), transparent 60%),
+      linear-gradient(180deg,#0a0908,#0e0c0a);
+  }
+  .cta-final::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,240,200,.5) 50%, transparent 51%),
+      radial-gradient(1px 1px at 70% 60%, rgba(233,196,106,.4) 50%, transparent 51%),
+      radial-gradient(1px 1px at 40% 80%, rgba(255,240,200,.4) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 85% 25%, rgba(233,196,106,.5) 50%, transparent 51%),
+      radial-gradient(1px 1px at 15% 70%, rgba(255,240,200,.4) 50%, transparent 51%);
+    background-size:300px 300px,260px 260px,400px 400px,320px 320px,360px 360px;
+  }
+  .cta-final .inner{position:relative;max-width:780px;margin:0 auto}
+  .cta-final h2{font-size:clamp(38px,5.5vw,72px)}
+  .cta-final p{color:#bdb3a3;margin-top:22px;font-size:17px;max-width:54ch;margin-inline:auto}
+  .cta-final .btn{margin-top:42px;padding:22px 36px;font-size:13.5px}
+  .cta-final .micro{margin-top:18px;font-size:12px;color:#8a8074;letter-spacing:.04em}
+  .cta-final .micro i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#25D366;margin-right:8px;vertical-align:middle;box-shadow:0 0 8px #25D366}
+
+  /* FOOTER */
+  footer{padding:48px 24px 36px;border-top:1px solid rgba(217,200,168,.1);background:#070605}
+  .foot{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+  .foot .info{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:#8a8074;letter-spacing:.04em}
+  .foot .info span{display:inline-flex;align-items:center;gap:8px}
+  .foot .info i{width:5px;height:5px;border-radius:50%;background:var(--gold-grad);display:inline-block}
+
+  /* FLOATING WA */
+  .wa-float{
+    position:fixed;right:18px;bottom:18px;z-index:60;
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 18px;border-radius:999px;
+    background:#25D366;color:#fff;font-weight:600;font-size:14px;
+    box-shadow:0 14px 36px -8px rgba(37,211,102,.55), 0 0 0 6px rgba(37,211,102,.15);
+    transition:transform .25s ease;
+  }
+  .wa-float:hover{transform:translateY(-2px) scale(1.02)}
+  .wa-float .wa-ico{width:18px;height:18px}
+  .wa-float .pulse{
+    position:absolute;inset:-4px;border-radius:999px;border:2px solid #25D366;
+    animation:pulse 2.2s ease-out infinite;opacity:0;
+  }
+  @keyframes pulse{0%{opacity:.6;transform:scale(.95)}100%{opacity:0;transform:scale(1.25)}}
+  @media(max-width:520px){.wa-float span.txt{display:none}.wa-float{padding:14px}}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="mark">
+      <span class="dot"></span>
+      <span>Adesivos DTF&nbsp;UV</span>
+    </div>
+    <div class="nav-links">
+      <a href="#dourado">Dourado</a>
+      <a href="#aplicacao">Aplicação</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#vitrine">Vitrine</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-ghost" id="wa-nav" href="#">Falar agora</a>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Adesivos DTF UV · Acabamento premium</span>
+      <h1 style="margin-top:18px">
+        <span class="line">O brilho que faz seu</span>
+        <span class="line">produto parecer</span>
+        <span class="line gold-text serif" style="font-style:italic">três vezes mais caro</span>
+      </h1>
+      <p class="sub">Adesivos DTF UV com dourado glitter premium, alto relevo e verniz. A gente cria a arte para você e entrega o tipo de acabamento que o cliente fotografa antes mesmo de usar.</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-gold btn-lg" id="wa-hero1" href="#">
+          <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1zm5.2-6.8c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-1 1.3c-.2.2-.4.3-.7.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.1.9 2.9.9 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+          Quero meu adesivo personalizado
+        </a>
+        <a class="btn btn-ghost" id="wa-hero2" href="#">Falar no WhatsApp</a>
+      </div>
+
+      <div class="hero-tags">
+        <span><i class="dot"></i>Dourado glitter que para o feed</span>
+        <span><i class="dot"></i>Alto relevo com verniz</span>
+        <span><i class="dot"></i>Pode lavar</span>
+        <span><i class="dot"></i>A gente cria a arte</span>
+      </div>
+    </div>
+
+    <div class="hero-slot slot-frame">
+      <div class="badge"><i></i>Dourado Glitter Premium</div>
+      <image-slot id="hero-product"
+                  shape="rounded" radius="14"
+                  src="assets/dtf-hero-showcase.png"
+                  placeholder="Solte aqui sua foto real: taça com adesivo dourado aplicado"></image-slot>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== S1 — POR QUE VENDE MAIS ==================== -->
+<section class="section" id="dourado">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <span class="eyebrow">Por que o dourado vende mais</span>
+        <h2 style="margin-top:18px">O cliente <em class="serif" style="font-style:italic">decide com o olho</em> antes de decidir com o bolso.</h2>
+        <p style="color:#bdb3a3;margin-top:22px;max-width:54ch">A diferença entre um copo comum e um copo que ele paga sem perguntar o preço não está no copo. Está no acabamento. E o dourado glitter premium é o atalho mais rápido para isso.</p>
+
+        <div class="why-points">
+          <div class="why-point">
+            <div class="n">01</div>
+            <div>
+              <h3>O brilho ativa percepção de valor</h3>
+              <p>Acabamentos metálicos e em relevo são lidos pelo cérebro como sinal de “produto fino”. É o mesmo motivo que perfume bom vem em frasco que brilha.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="n">02</div>
+            <div>
+              <h3>Para o scroll, sobra na foto</h3>
+              <p>O dourado em relevo reflete a luz mesmo no celular. A foto do cliente sai melhor — e foto boa vende próximo cliente sem você gastar mais um real em anúncio.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="n">03</div>
+            <div>
+              <h3>Justifica preço sem você precisar argumentar</h3>
+              <p>Quando a peça chega na mão com toque diferente e brilho de joia, o “quanto é?” já vem com a expectativa certa. Você não vende o adesivo. Vende a sensação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual slot-frame reveal">
+        <image-slot id="why-hero"
+                    shape="rounded" radius="14"
+                    src="assets/dtf-why-hero.png"
+                    placeholder="Foto vertical: close em taça com nome dourado, luz lateral"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hairline" style="max-width:var(--max);margin:0 auto"></div>
+
+<!-- ==================== S2 — DESTAQUE DOURADO ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="gold-feature">
+      <div class="copy reveal">
+        <span class="eyebrow">Destaque · Dourado glitter premium</span>
+        <h2 style="margin-top:18px">O acabamento que faz o cliente perguntar <em class="serif gold-text" style="font-style:italic">“onde você mandou fazer?”</em></h2>
+        <p>Dourado quente intenso, com textura de glitter fino, partículas pequenas e bem distribuídas, reflexos elegantes, aparência luxuosa e acabamento premium. Um visual sofisticado que valoriza a peça e chama atenção sem precisar gritar.</p>
+        <div class="quote">
+          “Não é só dourado. É o tipo de dourado que muda a primeira impressão da peça em meio segundo.”
+        </div>
+      </div>
+
+      <div class="gold-tile-grid reveal">
+        <image-slot id="gold-tile-1" class="slot-frame" src="assets/dtf-tile-1.png" placeholder="Nome dourado" radius="12"></image-slot>
+        <image-slot id="gold-tile-2" class="slot-frame" src="assets/dtf-tile-2.png" placeholder="Monograma dourado" radius="12"></image-slot>
+        <image-slot id="gold-tile-3" class="slot-frame" src="assets/dtf-tile-3.png" placeholder="Logo dourado" radius="12"></image-slot>
+        <image-slot id="gold-tile-4" class="slot-frame" src="assets/dtf-tile-4.png" placeholder="Ornamento dourado" radius="12"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S3 — APLICAÇÃO ==================== -->
+<section class="section alt" id="aplicacao">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Da caixa para a mão do cliente</span>
+      <h2 style="margin-top:18px">Veja o momento em que um copo <em class="serif" style="font-style:italic">vira presente</em>.</h2>
+      <p>Não é só um adesivo. É a transformação que acontece nas suas mãos em menos de 30 segundos. Sem máquina, sem prensa, sem complicação.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="img">
+          <div class="num">1</div>
+          <image-slot id="step-1"
+                      shape="rect"
+                      src="assets/dtf-step-1.png"
+                      placeholder="Foto real: adesivo sendo POSICIONADO sobre o copo, com filme transparente por cima"></image-slot>
+        </div>
+        <div class="body">
+          <h3 class="serif">Posicionando</h3>
+          <p>O adesivo é alinhado sobre a superfície com o filme de transferência ainda protegendo a arte.</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="img">
+          <div class="num">2</div>
+          <image-slot id="step-2"
+                      shape="rect"
+                      src="assets/dtf-step-2.png"
+                      placeholder="Foto real: MÃO pressionando o adesivo na taça"></image-slot>
+        </div>
+        <div class="body">
+          <h3 class="serif">Pressionando</h3>
+          <p>Com a mão, a arte é fixada à superfície garantindo aderência total e contato uniforme.</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="img">
+          <div class="num">3</div>
+          <image-slot id="step-3"
+                      shape="rect"
+                      src="assets/dtf-step-3.png"
+                      placeholder="Foto real: FILME sendo PUXADO, revelando a arte dourada"></image-slot>
+        </div>
+        <div class="body">
+          <h3 class="serif">Removendo o filme</h3>
+          <p>O filme de transferência sai com facilidade revelando a arte com brilho e alto relevo.</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="img">
+          <div class="num">4</div>
+          <image-slot id="step-4"
+                      shape="rect"
+                      src="assets/dtf-step-4.png"
+                      placeholder="Foto real: RESULTADO FINAL — taça com adesivo dourado brilhando"></image-slot>
+        </div>
+        <div class="body">
+          <h3 class="serif">Pronto e brilhando</h3>
+          <p>O dourado glitter aparece em alto relevo com verniz. O cliente recebe pronto, aplica em segundos e o produto vira lembrança.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="support-text reveal">Você não precisa de prensa, calor ou habilidade técnica. O DTF UV chega pronto. Em menos tempo do que custa preparar um café, o produto está vendido.</p>
+  </div>
+</section>
+
+<!-- ==================== S4 — VANTAGENS ==================== -->
+<section class="section" id="vantagens">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que escolher DTF UV</span>
+      <h2 style="margin-top:18px">Tudo que o adesivo comum <em class="serif" style="font-style:italic">não entrega</em>.</h2>
+    </div>
+
+    <div class="advs">
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.9 7.1.3-5.7 4.4 2 7-5.8-4-5.8 4 2-7L2.5 9.2l7.1-.3z"/></svg></div>
+        <h3>Dourado glitter premium</h3>
+        <p>Um brilho que não passa despercebido. É o detalhe que destaca o seu produto entre todos os outros do mesmo nicho.</p>
+      </div>
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg></div>
+        <h3>Alto relevo com verniz</h3>
+        <p>Quando o cliente toca, ele sente. E o que se sente custa mais caro do que o que só se vê.</p>
+      </div>
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c5 5 7 9 7 12a7 7 0 1 1-14 0c0-3 2-7 7-12z"/></svg></div>
+        <h3>Pode lavar</h3>
+        <p>Boa resistência à lavagem quando aplicado corretamente. Não é só bonito — é para usar.</p>
+      </div>
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>A gente cria sua arte</h3>
+        <p>Você não precisa ser designer. Mande a ideia no zap — um nome, uma referência, um print. A arte sai pronta para impressionar.</p>
+      </div>
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l5 5L20 7"/></svg></div>
+        <h3>Aplicação em 30 segundos</h3>
+        <p>Sem prensa, sem calor, sem técnica especial. Posiciona, pressiona, puxa o filme. O cliente faz no balcão.</p>
+      </div>
+      <div class="adv reveal">
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/></svg></div>
+        <h3>Aumenta o ticket médio</h3>
+        <p>O mesmo copo, com acabamento de joalheria, sai com outro preço. E o cliente paga sorrindo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S5 — ARTE ==================== -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="art-section">
+      <div class="reveal">
+        <span class="eyebrow">Criação da arte</span>
+        <h2 style="margin-top:18px">Você vai dormir com a ideia. Acorda com a <em class="serif gold-text" style="font-style:italic">arte pronta</em>.</h2>
+        <p style="color:#bdb3a3;margin-top:22px;max-width:54ch">Não precisa saber Photoshop, não precisa ter logo, não precisa nem ter certeza do que quer. Manda um print de referência, um nome, uma frase. A gente desenha pensando no melhor resultado em DTF UV — beleza, legibilidade e aquele “uau” quando o cliente abre.</p>
+        <ul class="art-list">
+          <li>Criamos artes para taças, copos e canecas</li>
+          <li>Fazemos nomes personalizados em script elegante</li>
+          <li>Adaptamos logos para acabamento dourado</li>
+          <li>Criamos artes sem fundo, prontas para aplicar</li>
+          <li>Preparamos arquivos otimizados para DTF UV</li>
+          <li>Versão padrão e versão em dourado glitter premium</li>
+        </ul>
+      </div>
+
+      <div class="art-visual slot-frame reveal">
+        <image-slot id="art-visual"
+                    shape="rounded" radius="14"
+                    src="assets/dtf-art-visual.png"
+                    placeholder="Foto real: arte do cliente ou close em dourado pronto"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S6 — ONDE APLICAR ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Onde aplicar</span>
+      <h2 style="margin-top:18px">Várias superfícies. Mesmo <em class="serif gold-text" style="font-style:italic">acabamento premium</em>.</h2>
+      <p>Funciona em vidro, acrílico, plástico, cerâmica, metal, madeira tratada, embalagens e outros materiais rígidos.</p>
+    </div>
+
+    <div class="places">
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 8 C18 32, 24 48, 30 50 C36 48, 42 32, 42 8 Z"/><path d="M30 50 L30 70"/><path d="M22 72 L38 72"/><ellipse cx="30" cy="8" rx="12" ry="2"/></svg><span class="name">Taça de vinho</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 16 Q12 44, 30 50 Q48 44, 48 16 Z"/><path d="M30 50 L30 70"/><path d="M22 72 L38 72"/><ellipse cx="30" cy="16" rx="18" ry="3"/></svg><span class="name">Taça de gin</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 8 C22 32, 26 48, 30 50 C34 48, 38 32, 38 8 Z"/><path d="M30 50 L30 70"/><path d="M22 72 L38 72"/><ellipse cx="30" cy="8" rx="8" ry="1.6"/></svg><span class="name">Taça de champanhe</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 18 L18 70 L42 70 L46 18 Z"/><ellipse cx="30" cy="18" rx="16" ry="2.5"/></svg><span class="name">Copo americano</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 10 L20 72 L40 72 L42 10 Z"/><ellipse cx="30" cy="10" rx="12" ry="2"/></svg><span class="name">Copo long drink</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="14" y="18" width="28" height="48" rx="2"/><path d="M42 28 Q52 28, 52 40 Q52 52, 42 52"/><ellipse cx="28" cy="18" rx="14" ry="2"/></svg><span class="name">Canecas</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="14" width="40" height="52" rx="1"/><path d="M16 22 L44 22 M16 30 L36 30"/></svg><span class="name">Acrílicos</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 22 L30 14 L50 22 L50 60 L30 68 L10 60 Z"/><path d="M10 22 L30 30 L50 22 M30 30 L30 68"/></svg><span class="name">Embalagens</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="28" width="40" height="38" rx="2"/><path d="M10 38 L50 38 M30 28 L30 66"/><path d="M30 28 C24 22, 14 22, 18 28 M30 28 C36 22, 46 22, 42 28"/></svg><span class="name">Brindes</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M30 64 C30 64, 10 50, 10 32 C10 22, 18 18, 24 22 C28 24, 30 30, 30 30 C30 30, 32 24, 36 22 C42 18, 50 22, 50 32 C50 50, 30 64, 30 64 Z"/></svg><span class="name">Lembrancinhas</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="18" width="44" height="32" rx="3"/><path d="M16 26 L44 26 M16 34 L34 34 M16 42 L40 42"/><path d="M22 50 L22 62 M38 50 L38 62"/></svg><span class="name">Placas</span></div>
+      <div class="place reveal"><svg viewBox="0 0 60 80" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="22" width="16" height="50" rx="1"/><rect x="32" y="14" width="18" height="58" rx="1"/><path d="M14 32 L22 32 M14 42 L22 42 M36 24 L46 24 M36 36 L46 36 M36 48 L46 48"/></svg><span class="name">Revenda</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S7 — VITRINE EMOCIONAL ==================== -->
+<section class="section alt" id="vitrine">
+  <div class="wrap">
+    <div class="vitrine-copy reveal">
+      <span class="eyebrow">Vitrine · Inspiração</span>
+      <h2 style="margin-top:18px">O tipo de produto que o cliente <em class="serif gold-text" style="font-style:italic">fotografa antes de usar</em>.</h2>
+      <p>Não é “é bonito”. É “é diferente”. É a peça que vai parar no story dele marcando o seu perfil. É marketing gratuito vindo embalado.</p>
+    </div>
+
+    <div class="vitrine reveal">
+      <div class="v-cell v1 slot-frame">
+        <image-slot id="v1" shape="rounded" radius="12" src="assets/dtf-v1.png" placeholder="FOTO PRINCIPAL — composição com 2-3 taças douradas"></image-slot>
+        <span class="tag">Vitrine</span>
+      </div>
+      <div class="v-cell v2 slot-frame">
+        <image-slot id="v2" shape="rounded" radius="12" src="assets/dtf-v2.png" placeholder="Close no brilho do dourado"></image-slot>
+        <span class="tag">Close brilho</span>
+      </div>
+      <div class="v-cell v3 slot-frame">
+        <image-slot id="v3" shape="rounded" radius="12" src="assets/dtf-v3.png" placeholder="Monograma dourado"></image-slot>
+        <span class="tag">Monograma</span>
+      </div>
+      <div class="v-cell v4 slot-frame">
+        <image-slot id="v4" shape="rounded" radius="12" src="assets/dtf-v4.png" placeholder="Fileira de copos personalizados"></image-slot>
+        <span class="tag">Lembrancinhas</span>
+      </div>
+      <div class="v-cell v5 slot-frame">
+        <image-slot id="v5" shape="rounded" radius="12" src="assets/dtf-v5.png" placeholder="Composição com caixinha, saquinho e taça"></image-slot>
+        <span class="tag">Composição</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S8 — REAÇÕES (PSICOLOGIA) ==================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">O que vai acontecer</span>
+      <h2 style="margin-top:18px">Imagine o momento em que o cliente <em class="serif gold-text" style="font-style:italic">abre a caixa</em>.</h2>
+      <p>Não é uma promessa. É a sequência exata de reações que aparecem quando alguém recebe uma peça com esse acabamento.</p>
+    </div>
+
+    <div class="reactions">
+      <div class="reaction reveal">
+        <div class="qmark">“</div>
+        <blockquote>Ela vai pegar o copo, virar na luz e ver o dourado refletindo. Vai sorrir antes de dizer alguma coisa.</blockquote>
+        <div class="who"><i></i>Primeiro segundo</div>
+      </div>
+      <div class="reaction reveal">
+        <div class="qmark">“</div>
+        <blockquote>Vai passar o dedo em cima do alto relevo. Vai sentir que tem peso, que tem textura, que não é igual ao que ela viu nas outras lojas.</blockquote>
+        <div class="who"><i></i>Primeiros 10 segundos</div>
+      </div>
+      <div class="reaction reveal">
+        <div class="qmark">“</div>
+        <blockquote>Vai abrir o celular e tirar foto. Vai postar marcando você. E o próximo pedido cai sem você gastar mais um centavo em anúncio.</blockquote>
+        <div class="who"><i></i>Primeira hora</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S9 — COMO FUNCIONA ==================== -->
+<section class="section paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como pedir o seu</span>
+      <h2 style="margin-top:18px;color:var(--ink)">Quatro passos. Sem <em class="serif" style="font-style:italic">complicação</em>.</h2>
+    </div>
+
+    <div class="how">
+      <div class="how-step reveal">
+        <div class="num">01</div>
+        <h3>Chame no WhatsApp</h3>
+        <p>Manda um “oi”, sua ideia, um print, um nome, uma frase. Sem formulário, sem briefing pesado.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="num">02</div>
+        <h3>A gente cria sua arte</h3>
+        <p>Adaptamos para DTF UV pensando no melhor visual em dourado, relevo e verniz.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="num">03</div>
+        <h3>Você aprova</h3>
+        <p>Você vê a arte antes da impressão. Aprovou, a gente imprime com acabamento premium.</p>
+      </div>
+      <div class="how-step reveal">
+        <div class="num">04</div>
+        <h3>Aplica em 30s</h3>
+        <p>O adesivo chega pronto. Você posiciona, pressiona, remove o filme. E entrega o “uau”.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 style="margin-top:18px">Tire suas <em class="serif gold-text" style="font-style:italic">dúvidas</em>.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details>
+        <summary>Preciso ter a arte pronta? <span class="plus">+</span></summary>
+        <p class="a">Não. Você pode enviar só a ideia, o nome, uma referência ou um print. A arte é criada pensando no melhor resultado em DTF UV — você não precisa ser designer.</p>
+      </details>
+      <details>
+        <summary>O adesivo pode molhar? <span class="plus">+</span></summary>
+        <p class="a">Sim. O DTF UV tem boa resistência à lavagem quando aplicado corretamente em superfícies rígidas. Não é descartável — é para usar de verdade.</p>
+      </details>
+      <details>
+        <summary>Vocês fazem dourado mesmo? <span class="plus">+</span></summary>
+        <p class="a">Sim. O dourado glitter premium é o nosso destaque: brilho intenso, textura fina, partículas pequenas bem distribuídas e reflexo elegante. É o tipo de dourado que muda a primeira impressão da peça em meio segundo.</p>
+      </details>
+      <details>
+        <summary>Em que superfícies eu posso aplicar? <span class="plus">+</span></summary>
+        <p class="a">Vidro, acrílico, plástico, cerâmica, metal, madeira tratada, embalagens e outros materiais rígidos. Funciona em taças, copos, canecas, brindes, placas e quase tudo que tenha superfície lisa.</p>
+      </details>
+      <details>
+        <summary>Preciso de prensa, calor ou alguma máquina? <span class="plus">+</span></summary>
+        <p class="a">Não. O DTF UV chega pronto. Posiciona, pressiona com a mão, puxa o filme. Em menos de 30 segundos a peça está finalizada.</p>
+      </details>
+      <details>
+        <summary>Como faço para pedir? <span class="plus">+</span></summary>
+        <p class="a">Clica no botão de WhatsApp aqui na página, manda sua ideia (pode ser só uma frase ou um print) e a gente conduz o resto. Atendimento direto, sem intermediário.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section class="cta-final" id="cta">
+  <div class="inner reveal">
+    <span class="eyebrow">Hora de transformar</span>
+    <h2 style="margin-top:20px">A próxima peça que você entrega pode <em class="serif gold-text" style="font-style:italic">brilhar de verdade</em>.</h2>
+    <p>Chame no WhatsApp, manda sua ideia e veja a arte ganhar forma. Atendimento direto, sem formulário, sem complicação.</p>
+    <a class="btn btn-gold btn-lg" id="wa-final" href="#">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1zm5.2-6.8c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-1 1.3c-.2.2-.4.3-.7.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.1.9 2.9.9 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+      Chamar no WhatsApp agora
+    </a>
+    <p class="micro"><i></i>Atendimento direto · Resposta normalmente em poucos minutos</p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="foot">
+    <div class="mark">
+      <span class="dot"></span>
+      <span>Adesivos DTF&nbsp;UV</span>
+    </div>
+    <div class="info">
+      <span><i></i>Alto relevo com verniz</span>
+      <span><i></i>Dourado glitter premium</span>
+      <span><i></i>Personalização sob medida</span>
+    </div>
+    <a class="btn btn-ghost" id="wa-foot" href="#" style="font-size:11px;padding:12px 18px">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- ==================== FLOATING WA ==================== -->
+<a class="wa-float" id="wa-float" href="#" aria-label="Falar no WhatsApp">
+  <span class="pulse"></span>
+  <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.4 17.1L2 22l5-1.3a11 11 0 0 0 16.4-9.5 11 11 0 0 0-2.9-7.7zM12 20.1a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9.1 9.1 0 1 1 12 20.1zm5.2-6.8c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1l-1 1.3c-.2.2-.4.3-.7.1a7.4 7.4 0 0 1-3.6-3.2c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.2 2.1.9 2.9.9 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span class="txt">Falar no WhatsApp</span>
+</a>
+
+<script>
+  /* ============ EDITÁVEL: seu WhatsApp ============ */
+  const WHATSAPP_NUMBER = "5500000000000";          // apenas dígitos com DDI
+  const WHATSAPP_MSG    = "Olá! Quero um adesivo DTF UV com dourado glitter premium.";
+
+  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
+  document.querySelectorAll('#wa-nav,#wa-hero1,#wa-hero2,#wa-final,#wa-float,#wa-foot').forEach(a=>a.setAttribute('href',waUrl));
+
+  /* ============ Reveal on scroll ============ */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
