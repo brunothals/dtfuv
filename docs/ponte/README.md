@@ -22,3 +22,6 @@
 - Público: senhoras · pratos, copos, taças, potes de tempero · Natal / Ano Novo
 - Só **efeito dourado** (nunca metalizado/glitter/foil)
 - Só superfície **rígida** (nunca tecido)
+
+
+> Influenciadores: use o repo [dtfuv-influenciadores](https://github.com/brunothals/dtfuv-influenciadores).
