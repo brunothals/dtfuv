@@ -9,3 +9,5 @@
 - URL canonica proposta: https://cartelasdtfuv.com.br.
 - Dados do vendedor e canal para direitos de privacidade: confirmar antes do merge.
 - Imagens mantidas; o efeito de cores ilustrado pode variar entre tela, luz e substrato.
+
+- Natal 2026: texto breve provisório na landing; copy final referenciada em `docs/copy/campanha-natal-landing.md` (Claude). Confirmar disponibilidade, quantidades, medidas, preços e prazos das cartelas pequenas antes de prometer condições. Nenhum preço novo criado.

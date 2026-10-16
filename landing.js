@@ -11,12 +11,15 @@
     attribution = Object.fromEntries(['utm_source', 'utm_campaign', 'utm_content', 'utm_medium', 'utm_term', 'fbclid', 'gclid'].filter(key => params.has(key)).map(key => [key, params.get(key)]));
     write(sessionStorage, 'dtf-attribution', JSON.stringify(attribution));
   }
-  function waLink(message = config.MESSAGE) {
-    const ref = ['utm_source', 'utm_campaign', 'utm_content'].map(key => String(attribution[key] || 'direto').replace(/[\r\n\[\]]/g, '').slice(0, 150)).join('-');
+  function waLink(message = config.MESSAGE, campaign) {
+    const source = { ...attribution, ...(campaign ? { utm_campaign: campaign } : {}) };
+    const ref = ['utm_source', 'utm_campaign', 'utm_content'].map(key => String(source[key] || 'direto').replace(/[\r\n\[\]]/g, '').slice(0, 150)).join('-');
     return `https://wa.me/${config.WHATSAPP}?text=${encodeURIComponent(`${message} [ref: ${ref}]`)}`;
   }
   window.waLink = waLink;
   const messages = {
+    'cartelas-pequenas': 'Olá! Quero cartelas pequenas: mini de 2–3,5 cm ou formatos de 10–15 cm. Pode confirmar medidas, quantidade, preço e prazo?',
+    'natal-mesa': 'Olá! Quero personalizar minha mesa de Natal com cartelas pequenas. Pode confirmar opções, preço e prazo?',
     'faixa-avulso': 'Olá! Quero um adesivo avulso. Pode confirmar preço e prazo?',
     'faixa-cartela': 'Olá! Quero uma cartela personalizada. Pode confirmar preço e prazo?',
     'faixa-kit': 'Olá! Quero um kit completo para meu evento.',
@@ -54,7 +57,12 @@
   }
   document.querySelectorAll('[id^="wa-"], a[data-sku]').forEach(link => {
     if (link.tagName !== 'A') return;
-    link.href = waLink(messages[link.dataset.sku] || config.MESSAGE);
+    link.href = waLink(messages[link.dataset.sku] || config.MESSAGE, link.dataset.campaign);
+    if (link.dataset.campaign) {
+      const url = new URL(link.href);
+      url.searchParams.set('utm_campaign', link.dataset.campaign);
+      link.href = url.href;
+    }
     link.addEventListener('click', () => {
       if (consent !== 'granted') return;
       if (window.fbq) window.fbq('track', 'Lead', { content_name: link.dataset.sku || 'geral' });
