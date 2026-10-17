@@ -6,7 +6,7 @@
 <title>Cartelas DTF UV pequenas por quantidade de artes | Natal e Ano Novo</title>
 <meta name="description" content="Cartelas pequenas de adesivos DTF UV vendidas por quantidade de artes: 10, 15, 20 ou 30 artes para decorar pratos, copos, taças, canecas e potes de tempero. Natal, Ano Novo e Efeito dourado. Peça pelo WhatsApp.">
 <link rel="canonical" href="https://cartelasdtfuv.com.br/">
-<meta name="theme-color" content="#7f1d24">
+<meta name="theme-color" content="#0d0a07">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%237f1d24%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-size=%2728%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27%23f3dc9a%27 text-anchor=%27middle%27%3EUV%3C/text%3E%3C/svg%3E">
 <meta name="robots" content="index, follow">
 
@@ -118,54 +118,105 @@ section{padding:64px 0}
 /* Topo */
 .topbar{background:var(--red-deep);color:#fff;font-size:.85rem;text-align:center;padding:8px 12px}
 .topbar strong{color:var(--gold-3)}
-header.nav{position:sticky;top:0;z-index:40;background:rgba(251,246,238,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid rgba(42,32,27,.08)}
+header.nav{position:sticky;top:0;z-index:40;background:rgba(13,10,7,.88);color:#f4ede4;backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(217,200,168,.16)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.05rem;text-decoration:none;white-space:nowrap}
 @media (min-width:600px){.logo{font-size:1.15rem}}
 .logo-mark{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 210deg,var(--red),var(--gold-2),var(--green),var(--red));display:grid;place-items:center;color:#fff;font-size:.8rem;font-family:var(--sans);font-weight:800}
 .nav ul{display:none;list-style:none;margin:0;padding:0;gap:22px;font-weight:500;font-size:.95rem}
-.nav ul a{text-decoration:none;color:var(--muted)}
-.nav ul a:hover{color:var(--ink)}
+.nav ul a{text-decoration:none;color:#cfc6b8}
+.nav ul a:hover{color:#f3dc9a}
 .nav .btn{min-height:42px;padding:9px 16px;font-size:.9rem}
 @media (min-width:900px){.nav ul{display:flex}}
 
-/* Hero */
-.hero{position:relative;overflow:hidden;padding:24px 0 48px;background:
-  radial-gradient(700px 380px at 95% -10%,rgba(217,177,92,.28),transparent 60%),
-  radial-gradient(600px 400px at -10% 110%,rgba(163,34,43,.10),transparent 60%),var(--cream)}
-.hero-grid{display:grid;gap:36px;align-items:center}
-@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}.hero{padding:72px 0 88px}}
-.hero h1 em{font-style:normal;color:var(--red)}
-.hero .lead{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:18px}
+/* Hero — fundo escuro com brilho dourado (visual herdado da landing antiga) */
+.hero{--hero-ink:#0d0a07;--champ:#d9c8a8;--gg:linear-gradient(135deg,#f9e7b0 0%,#f0cf76 18%,#d9a93a 38%,#b8821e 55%,#e6c365 72%,#f7e2a4 86%,#c8932a 100%);
+  position:relative;overflow:hidden;isolation:isolate;padding:22px 0 56px;color:#f4ede4;background:
+  radial-gradient(900px 520px at 85% 0%,rgba(201,147,42,.30),transparent 60%),
+  radial-gradient(700px 520px at 0% 100%,rgba(233,196,106,.16),transparent 60%),
+  radial-gradient(500px 300px at 50% 40%,rgba(163,34,43,.12),transparent 70%),var(--hero-ink)}
+/* duas camadas de pontinhos dourados (CSS puro, sem imagem) */
+.hero::before,.hero::after{content:"";position:absolute;inset:-20px;z-index:-1;pointer-events:none}
+.hero::before{background:
+  radial-gradient(1.6px 1.6px at 12% 18%,rgba(255,236,180,.95) 50%,transparent 52%),
+  radial-gradient(1.2px 1.2px at 32% 64%,rgba(233,196,106,.9) 50%,transparent 52%),
+  radial-gradient(2px 2px at 58% 28%,rgba(255,244,214,.9) 50%,transparent 52%),
+  radial-gradient(1px 1px at 76% 78%,rgba(233,196,106,.85) 50%,transparent 52%),
+  radial-gradient(1.4px 1.4px at 88% 40%,rgba(255,236,180,.9) 50%,transparent 52%),
+  radial-gradient(1px 1px at 44% 92%,rgba(255,244,214,.8) 50%,transparent 52%),
+  radial-gradient(1.2px 1.2px at 6% 82%,rgba(233,196,106,.85) 50%,transparent 52%);
+  background-size:180px 180px,140px 140px,230px 230px,120px 120px,200px 200px,160px 160px,110px 110px;
+  opacity:.75;animation:twinkle 4.5s ease-in-out infinite alternate}
+.hero::after{background:
+  radial-gradient(2.4px 2.4px at 22% 40%,rgba(255,240,200,.95) 45%,rgba(233,196,106,.35) 60%,transparent 70%),
+  radial-gradient(1.8px 1.8px at 66% 12%,rgba(255,240,200,.9) 45%,rgba(233,196,106,.3) 60%,transparent 70%),
+  radial-gradient(1.4px 1.4px at 82% 66%,rgba(249,231,176,.9) 50%,transparent 52%),
+  radial-gradient(1px 1px at 48% 52%,rgba(249,231,176,.8) 50%,transparent 52%),
+  linear-gradient(180deg,transparent 55%,rgba(13,10,7,.55));
+  background-size:260px 260px,310px 310px,170px 170px,90px 90px,100% 100%;
+  opacity:.55;animation:twinkle 6s ease-in-out -3s infinite alternate}
+@keyframes twinkle{from{opacity:.5}to{opacity:1}}
+.hero-grid{position:relative;display:grid;gap:40px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}.hero{padding:76px 0 96px}}
+.hero .eyebrow{color:var(--champ);letter-spacing:.2em}
+.hero h1{position:relative;color:#f7f0e6}
+.hero h1 em{font-style:normal;background:var(--gg);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:goldShimmer 6s ease-in-out infinite;filter:drop-shadow(0 0 16px rgba(233,196,106,.25))}
+@keyframes goldShimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.hero .lead{font-size:1.05rem;color:#d6ccbd;max-width:560px;margin-bottom:18px}
+.hero .lead strong{color:#f3dc9a}
 @media (min-width:960px){.hero .lead{font-size:1.15rem}}
-.offer{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid rgba(168,120,42,.35);border-radius:16px;padding:14px 16px;margin:18px 0 0;box-shadow:var(--shadow);max-width:520px}
-.offer-qty{flex:none;width:64px;height:64px;border-radius:14px;background:linear-gradient(145deg,var(--red),var(--red-deep));color:#fff;display:grid;place-items:center;text-align:center;line-height:1;font-weight:800;font-size:1.6rem}
-.offer-qty small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
-.offer b{display:block;font-size:1.02rem}
-.offer span{color:var(--muted);font-size:.9rem}
+.offer{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(233,196,106,.45);border-radius:16px;padding:14px 16px;margin:18px 0 0;max-width:520px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 0 0 1px rgba(0,0,0,.2),0 18px 40px -20px rgba(233,196,106,.45)}
+.offer-qty{flex:none;width:64px;height:64px;border-radius:14px;background:var(--gg);background-size:200% 200%;animation:goldShimmer 6s ease-in-out infinite;color:#2a1d05;display:grid;place-items:center;text-align:center;line-height:1;font-weight:800;font-size:1.6rem}
+.offer-qty small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.offer b{display:block;font-size:1.02rem;color:#f7f0e6}
+.offer span{color:#cfc6b8;font-size:.9rem}
 .hero-cta{display:flex;flex-direction:column;gap:12px;max-width:520px}
-.hero-cta .btn-wa{font-size:1.05rem;min-height:60px;padding:16px 22px;text-align:left;line-height:1.25}
+.hero-cta .btn-wa{font-size:1.05rem;min-height:60px;padding:16px 22px;text-align:left;line-height:1.25;box-shadow:0 0 0 2px rgba(233,196,106,.55),0 14px 34px -10px rgba(31,168,85,.75)}
+.hero .btn-ghost{color:#f4ede4;border-color:rgba(217,200,168,.4)}
+.hero .btn-ghost:hover{border-color:#f3dc9a}
 @media (min-width:560px){.hero-cta{flex-direction:row;flex-wrap:wrap}}
 .steps-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 0;max-width:520px;padding:0;list-style:none;counter-reset:s}
-.steps-mini li{counter-increment:s;background:rgba(255,255,255,.65);border:1px solid rgba(42,32,27,.08);border-radius:14px;padding:12px 10px;font-size:.84rem;line-height:1.3}
-.steps-mini li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;font-size:.8rem;margin-bottom:6px}
+.steps-mini li{counter-increment:s;background:rgba(255,255,255,.04);border:1px solid rgba(217,200,168,.2);border-radius:14px;padding:12px 10px;font-size:.84rem;line-height:1.3;color:#e5dccf}
+.steps-mini li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gg);color:#2a1d05;font-weight:800;font-size:.8rem;margin-bottom:6px}
+
+/* Adesivos reais soltos pelo hero */
+.stk{position:absolute;z-index:2;height:auto;pointer-events:none;user-select:none;
+  transform:rotate(var(--r,0deg));filter:drop-shadow(0 8px 10px rgba(0,0,0,.45));
+  animation:floaty var(--d,7s) ease-in-out var(--delay,0s) infinite alternate;will-change:transform}
+@keyframes floaty{from{transform:translateY(0) rotate(var(--r,0deg))}to{transform:translateY(-8px) rotate(calc(var(--r,0deg) + 3deg))}}
+.stk-h1{width:48px;right:2px;bottom:-4px;--r:12deg}
+.stk-top{width:40px;right:18px;top:4px;--r:-14deg;--d:6s}
+@media (min-width:960px){.stk-h1{display:none}.stk-top{width:70px;right:auto;left:46%;top:24px}}
+@media (min-width:1200px){.stk-h1{display:block;width:72px;right:auto;left:-104px;bottom:auto;top:0;--r:-12deg}}
 
 /* Mosaico do hero */
 .mosaic{position:relative;height:420px;max-width:520px;margin-inline:auto;width:100%}
-@media (min-width:960px){.mosaic{height:520px}}
-.sheet{position:absolute;background:#fff;border-radius:16px;padding:10px 10px 12px;box-shadow:0 22px 40px -18px rgba(60,35,20,.45);border:1px solid rgba(42,32,27,.06)}
+@media (min-width:960px){.mosaic{height:540px}}
+.mosaic .stk{z-index:3}
+.m1{width:78px;left:-4px;top:-14px;--r:-16deg;--d:7.5s}
+.m2{width:84px;right:-6px;top:44%;--r:10deg;--d:6.5s;--delay:-2s}
+.m3{width:70px;left:38%;bottom:-18px;--r:-6deg;--d:8s;--delay:-4s}
+.m4{width:66px;right:30%;top:-22px;--r:8deg;--d:7s;--delay:-1s}
+.m5{width:62px;left:2%;top:52%;--r:14deg;--d:9s;--delay:-3s}
+.m6{width:60px;right:4%;bottom:6%;--r:-10deg;--d:6s;--delay:-5s}
+@media (max-width:959px){.m5,.m6{display:none}}
+@media (min-width:960px){.m1{width:100px;left:-36px}.m2{width:104px;right:-34px}.m3{width:92px}.m4{width:84px}}
+.sheet{position:absolute;background:#fff;border-radius:16px;padding:10px 10px 12px;box-shadow:0 24px 50px -18px rgba(0,0,0,.7),0 0 0 1px rgba(233,196,106,.25)}
 .sheet img{border-radius:10px;width:100%;height:100%;object-fit:cover}
-.sheet .tag{position:absolute;left:12px;bottom:-12px;background:var(--ink);color:#fff;font-size:.75rem;font-weight:700;padding:6px 10px;border-radius:999px;box-shadow:var(--shadow)}
-.sheet .tag.gold-tag{background:linear-gradient(120deg,var(--gold-1),var(--gold-2));color:#2a1d07}
+.sheet .tag{position:absolute;left:12px;bottom:-12px;background:#1b140e;color:#f3dc9a;border:1px solid rgba(233,196,106,.5);font-size:.75rem;font-weight:700;padding:6px 10px;border-radius:999px;box-shadow:var(--shadow)}
+.sheet .tag.gold-tag{background:linear-gradient(120deg,var(--gold-1),var(--gold-2));color:#2a1d07;border:0}
 .s1{width:58%;height:66%;left:0;top:6%;transform:rotate(-5deg)}
 .s2{width:50%;height:58%;right:0;top:0;transform:rotate(4deg)}
 .s3{width:46%;height:46%;right:10%;bottom:0;transform:rotate(-2deg)}
 .s3 img{object-fit:contain;background:#fff}
-.seal{position:absolute;left:4%;bottom:4%;width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold-3),var(--gold-2) 45%,var(--gold-1));display:grid;place-items:center;text-align:center;color:#2a1d07;font-weight:800;font-size:.78rem;line-height:1.15;box-shadow:0 12px 26px -10px rgba(120,80,20,.6);transform:rotate(-10deg)}
+.seal{position:absolute;z-index:2;left:4%;bottom:4%;width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f9e7b0,#e9c46a 45%,#b8821e);display:grid;place-items:center;text-align:center;color:#2a1d07;font-weight:800;font-size:.78rem;line-height:1.15;box-shadow:0 0 30px -4px rgba(233,196,106,.55);transform:rotate(-10deg)}
 .seal span{display:block;font-family:var(--serif);font-size:1.5rem}
+/* celular: menos animação para ficar leve */
+@media (max-width:959px){.hero::after{animation:none}.mosaic .stk{animation-duration:10s}}
+@media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.stk,.hero h1 em,.offer-qty{animation:none!important}}
 
 /* Faixa de confiança */
-.trust{background:var(--ink);color:#f5ece0;padding:18px 0}
+.trust{background:#1a130d;color:#f5ece0;padding:18px 0;border-top:1px solid rgba(233,196,106,.25)}
 .trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 18px;font-size:.9rem}
 @media (min-width:860px){.trust ul{grid-template-columns:repeat(4,1fr)}}
 .trust li{display:flex;gap:10px;align-items:center}
@@ -339,10 +390,11 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
 
 <!-- HERO -->
 <section class="hero">
+  <img class="stk stk-top" src="img/stickers/estrela.webp" alt="" aria-hidden="true" width="279" height="312" fetchpriority="low">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Adesivos DTF UV · Natal e Ano Novo</span>
-      <h1>Cartelas pequenas, <em>do jeitinho</em> que você precisa.</h1>
+      <span class="eyebrow">Natal e Ano Novo</span>
+      <h1>Cartelas pequenas, <em>do jeitinho</em> que você precisa.<img class="stk stk-h1" src="img/stickers/laco.webp" alt="" aria-hidden="true" width="223" height="312"></h1>
       <p class="lead">Aqui você escolhe pela <strong>quantidade de artes</strong>: 10, 15, 20 ou 30 adesivos pequenos para decorar pratos, copos, taças, canecas e potes de tempero. É só colar, sem máquina.</p>
 
       <div class="hero-cta">
@@ -362,6 +414,12 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
     </div>
 
     <div class="mosaic" aria-hidden="true">
+      <img class="stk m1" src="img/stickers/arvore.webp" alt="" width="223" height="312" loading="lazy">
+      <img class="stk m2" src="img/stickers/sinos.webp" alt="" width="287" height="243" loading="lazy">
+      <img class="stk m3" src="img/stickers/coracao.webp" alt="" width="281" height="312" loading="lazy">
+      <img class="stk m4" src="img/stickers/guirlanda.webp" alt="" width="290" height="281" loading="lazy">
+      <img class="stk m5" src="img/stickers/presente.webp" alt="" width="231" height="312" loading="lazy">
+      <img class="stk m6" src="img/stickers/ursinho.webp" alt="" width="265" height="312" loading="lazy">
       <div class="sheet s1"><img src="img/cartelas/natal-laco-bico-de-papagaio.webp" alt="" width="760" height="900"><span class="tag">Laço de Natal</span></div>
       <div class="sheet s2"><img src="img/cartelas/natal-feliz-natal-traco.webp" alt="" width="900" height="675"><span class="tag">Feliz Natal</span></div>
       <div class="sheet s3"><img src="img/cartelas/natal-arvore-sinos-dourado.webp" alt="" width="455" height="900"><span class="tag gold-tag">Efeito dourado</span></div>
