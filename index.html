@@ -179,7 +179,7 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(13,10,7,.88);color:#
 .steps-mini li{counter-increment:s;background:rgba(255,255,255,.04);border:1px solid rgba(217,200,168,.2);border-radius:14px;padding:12px 10px;font-size:.84rem;line-height:1.3;color:#e5dccf}
 .steps-mini li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gg);color:#2a1d05;font-weight:800;font-size:.8rem;margin-bottom:6px}
 
-/* Fotos reais no hero */
+/* Fotos do hero */
 .hero-grid{grid-template-areas:"top" "photos" "bottom"}
 .hero-top{grid-area:top}.hero-bottom{grid-area:bottom}.hero-photos{grid-area:photos}
 @media (min-width:960px){.hero-grid{grid-template-areas:"top photos" "bottom photos";align-items:start;row-gap:0}.hero-bottom{margin-top:0}}
@@ -196,7 +196,6 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(13,10,7,.88);color:#
   .hp-main{position:absolute;right:6%;top:0;width:62%;aspect-ratio:4/5}
   .hp-relevo{position:absolute;left:0;bottom:2%;width:50%;aspect-ratio:1/1;transform:rotate(-3deg)}
 }
-.real-tag{position:absolute;top:10px;left:10px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#2a1d05;background:linear-gradient(120deg,#f9e7b0,#e9c46a);padding:4px 8px;border-radius:999px}
 .seal{position:absolute;z-index:2;right:-6px;top:-14px;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f9e7b0,#e9c46a 45%,#b8821e);display:grid;place-items:center;text-align:center;color:#2a1d07;font-weight:800;font-size:.7rem;line-height:1.15;box-shadow:0 0 30px -4px rgba(233,196,106,.55);transform:rotate(10deg)}
 .seal span{display:block;font-family:var(--serif);font-size:1.25rem}
 @media (min-width:960px){.seal{right:auto;left:8%;top:10%;width:118px;height:118px;font-size:.8rem;transform:rotate(-10deg)}.seal span{font-size:1.55rem}}
@@ -251,7 +250,6 @@ header.nav{position:sticky;top:0;z-index:40;background:rgba(13,10,7,.88);color:#
 .badge.b-gold{background:linear-gradient(120deg,var(--gold-1),var(--gold-2));color:#2a1d07}
 .badge.b-green{background:var(--green)}
 .badge.b-ink{background:var(--ink)}
-.real{position:absolute;right:10px;bottom:8px;font-size:.66rem;color:var(--muted);background:rgba(255,255,255,.9);padding:2px 8px;border-radius:999px}
 .card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card-body h3{margin:0}
 .card-body p{margin:0;color:var(--muted);font-size:.92rem}
@@ -399,13 +397,11 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
 
     <div class="hero-photos">
       <figure class="hp hp-main">
-        <img src="img/fotos/aplicando-efeito-dourado.webp" alt="Foto real: adesivo de flor de lótus em Efeito dourado sendo aplicado em uma caneca branca, com o filme sendo retirado para trás" width="576" height="720" fetchpriority="high">
-        <span class="real-tag">Foto real</span>
+        <img src="img/fotos/aplicando-efeito-dourado.webp" alt="adesivo de flor de lótus em Efeito dourado sendo aplicado em uma caneca branca, com o filme sendo retirado para trás" width="576" height="720" fetchpriority="high">
         <figcaption>Aplicando o <b>Efeito dourado</b></figcaption>
       </figure>
       <figure class="hp hp-relevo">
-        <img src="img/fotos/alto-relevo-verniz.webp" alt="Foto real em close: adesivo com detalhes em Efeito dourado e alto relevo em verniz brilhante" width="900" height="694" loading="lazy">
-        <span class="real-tag">Foto real</span>
+        <img src="img/fotos/alto-relevo-verniz.webp" alt="Close: adesivo com detalhes em Efeito dourado e alto relevo em verniz brilhante" width="900" height="694" loading="lazy">
         <figcaption><b>Alto relevo</b> em verniz</figcaption>
       </figure>
       <div class="seal" aria-hidden="true"><div><span>10 a 30</span>artes por cartela</div></div>
@@ -451,8 +447,8 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
       <a class="btn btn-wa" data-wa="dourado" data-wa-msg="Olá! Quero uma cartela com Efeito dourado. Pode me ajudar?" href="#"><svg><use href="#i-wa"/></svg>Quero Efeito dourado</a>
     </div>
     <div class="gold-imgs">
-      <figure><img src="img/fotos/caneca-efeito-dourado.webp" alt="Foto real: caneca branca com flor de lótus em Efeito dourado já aplicada" loading="lazy" width="576" height="720"><figcaption>Foto real · aplicado na caneca</figcaption></figure>
-      <figure><img src="img/fotos/alto-relevo-verniz.webp" alt="Foto real em close do alto relevo em verniz com detalhes em Efeito dourado" loading="lazy" width="900" height="694"><figcaption>Foto real · alto relevo em verniz</figcaption></figure>
+      <figure><img src="img/fotos/caneca-efeito-dourado.webp" alt="caneca branca com flor de lótus em Efeito dourado já aplicada" loading="lazy" width="576" height="720"><figcaption>Aplicado na caneca</figcaption></figure>
+      <figure><img src="img/fotos/alto-relevo-verniz.webp" alt="Close do alto relevo em verniz com detalhes em Efeito dourado" loading="lazy" width="900" height="694"><figcaption>Alto relevo em verniz</figcaption></figure>
     </div>
   </div>
 </section>
@@ -510,7 +506,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
 
     <div class="grid">
       <article class="card" data-id="natal-arvore-sinos" data-nome="Árvore e sinos Efeito dourado" data-cat="natal dourado" data-qtd-padrao="10">
-        <div class="card-media"><img src="img/cartelas/natal-arvore-sinos-dourado.webp" alt="Cartela de árvores de Natal, sinos e guirlandas em Efeito dourado" loading="lazy" width="455" height="900"><span class="badge b-gold">Efeito dourado</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/natal-arvore-sinos-dourado.webp" alt="Cartela de árvores de Natal, sinos e guirlandas em Efeito dourado" loading="lazy" width="455" height="900"><span class="badge b-gold">Efeito dourado</span></div>
         <div class="card-body">
           <h3>Árvore e sinos · Efeito dourado</h3>
           <p>Árvores, sinos e guirlandas com cores que imitam o dourado. Ar de festa na mesa.</p>
@@ -519,7 +515,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="ano-novo-estrelas" data-nome="Estrelas Efeito dourado" data-cat="ano-novo dourado" data-qtd-padrao="10">
-        <div class="card-media"><img src="img/cartelas/ano-novo-estrelas-dourado.webp" alt="Cartela de estrelas em Efeito dourado" loading="lazy" width="250" height="900"><span class="badge b-gold">Ano Novo</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/ano-novo-estrelas-dourado.webp" alt="Cartela de estrelas em Efeito dourado" loading="lazy" width="250" height="900"><span class="badge b-gold">Ano Novo</span></div>
         <div class="card-body">
           <h3>Estrelas · Efeito dourado</h3>
           <p>Estrelas com cores que imitam o dourado para as taças da virada.</p>
@@ -528,7 +524,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="natal-laco" data-nome="Laço de Natal" data-cat="natal">
-        <div class="card-media"><img class="cover" src="img/cartelas/natal-laco-bico-de-papagaio.webp" alt="Cartela de adesivos de laço vermelho de Natal com folhas verdes" loading="lazy" width="760" height="900"><span class="badge">Natal</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img class="cover" src="img/cartelas/natal-laco-bico-de-papagaio.webp" alt="Cartela de adesivos de laço vermelho de Natal com folhas verdes" loading="lazy" width="760" height="900"><span class="badge">Natal</span></div>
         <div class="card-body">
           <h3>Laço de Natal</h3>
           <p>Laço vermelho com folhagem. Lindo em taças, potes de doce e canecas.</p>
@@ -537,7 +533,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="natal-feliz-natal" data-nome="Feliz Natal traço preto" data-cat="natal">
-        <div class="card-media"><img src="img/cartelas/natal-feliz-natal-traco.webp" alt="Cartela Feliz Natal em traço preto com casinhas, presentes, corações, estrelas e flocos de neve" loading="lazy" width="900" height="675"><span class="badge">Natal</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/natal-feliz-natal-traco.webp" alt="Cartela Feliz Natal em traço preto com casinhas, presentes, corações, estrelas e flocos de neve" loading="lazy" width="900" height="675"><span class="badge">Natal</span></div>
         <div class="card-body">
           <h3>Feliz Natal traço preto</h3>
           <p>Casinhas, presentes, corações, estrelas e flocos. Elegante em vidro e porcelana branca.</p>
@@ -546,7 +542,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="natal-bichinhos" data-nome="Bichinhos de Natal" data-cat="natal">
-        <div class="card-media"><img src="img/cartelas/natal-bichinhos-traco.webp" alt="Cartela de bichinhos de Natal em traço: ursinhos, renas e guirlandas" loading="lazy" width="900" height="768"><span class="badge">Natal</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/natal-bichinhos-traco.webp" alt="Cartela de bichinhos de Natal em traço: ursinhos, renas e guirlandas" loading="lazy" width="900" height="768"><span class="badge">Natal</span></div>
         <div class="card-body">
           <h3>Bichinhos de Natal</h3>
           <p>Ursinhos, renas, raposinhas e guirlandas em traço. Fofos para canecas e potinhos.</p>
@@ -555,7 +551,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="natal-pinheiro" data-nome="Raminhos de pinheiro" data-cat="natal">
-        <div class="card-media"><img class="cover" src="img/cartelas/natal-raminhos-pinheiro.webp" alt="Cartela de raminhos de pinheiro verdes" loading="lazy" width="760" height="900"><span class="badge b-green">Natal</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img class="cover" src="img/cartelas/natal-raminhos-pinheiro.webp" alt="Cartela de raminhos de pinheiro verdes" loading="lazy" width="760" height="900"><span class="badge b-green">Natal</span></div>
         <div class="card-body">
           <h3>Raminhos de pinheiro</h3>
           <p>Ramos verdes delicados para borda de prato, copo americano e taça.</p>
@@ -564,7 +560,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="ano-novo-brilhos" data-nome="Brilhos de Ano Novo" data-cat="ano-novo" data-qtd-padrao="30">
-        <div class="card-media"><img src="img/cartelas/ano-novo-brilhos.webp" alt="Cartela de brilhos de quatro pontas em preto" loading="lazy" width="900" height="837"><span class="badge b-ink">Ano Novo</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/ano-novo-brilhos.webp" alt="Cartela de brilhos de quatro pontas em preto" loading="lazy" width="900" height="837"><span class="badge b-ink">Ano Novo</span></div>
         <div class="card-body">
           <h3>Brilhos de Ano Novo</h3>
           <p>Brilhos de quatro pontas, minimalistas, para espalhar em copos e taças.</p>
@@ -573,7 +569,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="cozinha-temperos" data-nome="Nomes de temperos" data-cat="cozinha" data-qtd-padrao="15">
-        <div class="card-media"><img src="img/cartelas/cozinha-temperos.webp" alt="Cartela com nomes de temperos: azeite, shoyo, mostarda, gergelim, canela, orégano, chimichurri" loading="lazy" width="900" height="383"><span class="badge b-green">Cozinha</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/cozinha-temperos.webp" alt="Cartela com nomes de temperos: azeite, shoyo, mostarda, gergelim, canela, orégano, chimichurri" loading="lazy" width="900" height="383"><span class="badge b-green">Cozinha</span></div>
         <div class="card-body">
           <h3>Nomes de temperos</h3>
           <p>Azeite, shoyo, orégano, canela… Você manda a lista dos seus potes e a gente monta.</p>
@@ -582,7 +578,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
       <article class="card" data-id="cozinha-agua-leite" data-nome="Etiquetas Água Quente e Leite" data-cat="cozinha" data-qtd-padrao="10">
-        <div class="card-media"><img src="img/cartelas/cozinha-agua-quente-leite.webp" alt="Cartela de etiquetas Água Quente e Leite com moldura clássica" loading="lazy" width="900" height="601"><span class="badge b-green">Cozinha</span><span class="real">arquivo real de impressão</span></div>
+        <div class="card-media"><img src="img/cartelas/cozinha-agua-quente-leite.webp" alt="Cartela de etiquetas Água Quente e Leite com moldura clássica" loading="lazy" width="900" height="601"><span class="badge b-green">Cozinha</span></div>
         <div class="card-body">
           <h3>Etiquetas Água Quente e Leite</h3>
           <p>Moldura clássica para garrafas térmicas, potes e jarras.</p>
@@ -591,7 +587,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
         </div>
       </article>
     </div>
-    <p class="catalog-note">As imagens são dos nossos arquivos reais de impressão. Sua cartela é montada com a quantidade de artes que você escolher, e você aprova a prévia antes de imprimir. As cores podem variar um pouco entre a tela e a peça.</p>
+    <p class="catalog-note">As imagens são dos nossos arquivos de impressão. Sua cartela é montada com a quantidade de artes que você escolher, e você aprova a prévia antes de imprimir. As cores podem variar um pouco entre a tela e a peça.</p>
   </div>
 </section>
 
@@ -609,7 +605,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
       <div class="use"><div class="ico">☕</div><b>Canecas</b><span>presente que encanta</span></div>
       <div class="use"><div class="ico">🫙</div><b>Potes de tempero</b><span>cozinha organizada</span></div>
     </div>
-    <figure class="real-photo"><img src="img/fotos/pote-natal-aplicado.webp" alt="Foto real: pote de vidro decorado com adesivo DTF UV de laço de Natal" loading="lazy" width="720" height="900"><figcaption>Foto real · pote de vidro com adesivo de Natal</figcaption></figure>
+    <figure class="real-photo"><img src="img/fotos/pote-natal-aplicado.webp" alt="pote de vidro decorado com adesivo DTF UV de laço de Natal" loading="lazy" width="720" height="900"><figcaption>Pote de vidro com adesivo de Natal</figcaption></figure>
     <div class="warn"><b>Importante:</b><span>DTF UV é só para itens rígidos (vidro, porcelana, cerâmica, acrílico, plástico rígido). <strong>Não serve para roupa nem tecido.</strong></span></div>
   </div>
 </section>
@@ -629,7 +625,7 @@ body:has(.sticky-cta.show) #cookie-banner{bottom:84px}
       <li><b>Pressione bem</b><span>Passe bastante o dedo por cima, com firmeza, em todo o adesivo.</span></li>
       <li><b>Tire o plástico</b><span>Puxe o filme de cima devagar, deitado, para trás.</span><em class="no">Nunca puxe para cima</em></li>
     </ol>
-    <figure class="real-photo"><img src="img/fotos/retirando-filme.webp" alt="Foto real: filme de cima sendo retirado devagar, para trás, depois de pressionar o adesivo" loading="lazy" width="720" height="840"><figcaption>Foto real · passo 5: tirando o filme devagar, para trás</figcaption></figure>
+    <figure class="real-photo"><img src="img/fotos/retirando-filme.webp" alt="filme de cima sendo retirado devagar, para trás, depois de pressionar o adesivo" loading="lazy" width="720" height="840"><figcaption>Passo 5: tirando o filme devagar, para trás</figcaption></figure>
     <!-- [VIDEO_APLICACAO]: espaço para um vídeo REAL curto do Bruno aplicando (ex.: assets/video/aplicacao.mp4 com poster). Não usar vídeo gerado por IA como prova. -->
   </div>
 </section>
