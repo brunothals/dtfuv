@@ -19,7 +19,7 @@ Nada disso foi inventado. Preencha antes de ligar os anúncios.
 | Placeholder | Onde |
 |---|---|
 | `[DATA_LIMITE_NATAL]` | Faixa do topo: data limite para pedir e receber antes do Natal |
-| `[TAMANHO_ARTE ~3 cm]` | Tamanho aproximado de cada arte (seção "Por quantidade" e FAQ) |
+| `[TAMANHO_ARTE]` | Tamanho de cada arte (seção "Por quantidade" e FAQ) |
 | `[FORMAS_PAGAMENTO / PIX]` | Passo 3 e FAQ |
 | `[PRAZO]`, `[FRETE]` | FAQ e termos |
 | `[CUIDADOS_LAVAGEM]` | FAQ: como cuidar da peça |
@@ -27,6 +27,7 @@ Nada disso foi inventado. Preencha antes de ligar os anúncios.
 | `[INSTAGRAM]`, `[RAZAO_SOCIAL / CNPJ]`, `[CIDADE_UF]` | Rodapé, privacidade e termos |
 | `[POLITICA_TROCAS]` | termos/index.html |
 | `[VIDEO_APLICACAO]` | Comentário na seção "Como aplicar": espaço para um vídeo REAL curto de aplicação |
+| `[FOTO_RELEVO]` (opcional) | A foto de relevo atual é real, mas de um rótulo rosa/dourado de cliente. O ideal é trocar `img/fotos/alto-relevo-verniz` por um close de uma arte em **Efeito dourado com alto relevo em verniz**, de lado, com luz batendo |
 
 ## Imagens das cartelas
 As fotos do catálogo são recortes dos arquivos reais de impressão do Drive (nada gerado por IA):
@@ -45,3 +46,16 @@ As fotos do catálogo são recortes dos arquivos reais de impressão do Drive (n
 
 Ficaram de fora as artes com marca ou nome de clientes (logos, nomes próprios, times, monogramas de casamento).
 O ideal é trocar por **fotos reais das cartelas cortadas** e de peças aplicadas assim que houver.
+
+## Fotos reais (img/fotos)
+Todas tiradas de vídeos e fotos reais do Drive (frames extraídos com ffmpeg). Nada gerado por IA.
+
+| Arquivo | Origem | Onde aparece |
+|---|---|---|
+| aplicando-efeito-dourado | vídeo aplicacao-dourado-editado.mp4, frame ~21 s | Hero (foto principal) |
+| caneca-efeito-dourado | mesmo vídeo, frame ~23,5 s | Seção Efeito dourado |
+| alto-relevo-verniz | foto IMG_1257.HEIC (recorte, sem o nome da cliente) | Hero e seção Efeito dourado |
+| retirando-filme | vídeo aplicacao/IMG_8181.mp4, frame ~16 s | Como aplicar |
+| pote-natal-aplicado | vídeo aplicacao/IMG_8722.mp4, frame ~20,5 s | Onde aplicar |
+
+O vídeo do Efeito dourado tem só 576x1024. Uma foto em resolução maior de uma peça dourada aplicada deixaria o hero mais nítido.
